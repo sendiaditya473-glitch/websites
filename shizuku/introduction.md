@@ -1,4 +1,26 @@
-# Introduction
+
+javax.net.ssl.SSLProtocolException: Read error: ssl=0xb400007263e78758: Failure in SSL library, usually a protocol error
+error:10000416:SSL routines:OPENSSL_internal:SSLV3_ALERT_CERTIFICATE_UNKNOWN (external/boringssl/src/ssl/tls_record.cc:489 0xb400007273eb2670:0x00000003)
+	at com.android.org.conscrypt.NativeCrypto.ENGINE_SSL_read_direct(Native Method)
+	at com.android.org.conscrypt.NativeSsl.readDirectByteBuffer(NativeSsl.java:685)
+	at com.android.org.conscrypt.ConscryptEngine.readPlaintextDataDirect(ConscryptEngine.java:997)
+	at com.android.org.conscrypt.ConscryptEngine.readPlaintextData(ConscryptEngine.java:981)
+	at com.android.org.conscrypt.ConscryptEngine.unwrap(ConscryptEngine.java:776)
+	at com.android.org.conscrypt.ConscryptEngine.unwrap(ConscryptEngine.java:647)
+	at com.android.org.conscrypt.ConscryptEngine.unwrap(ConscryptEngine.java:612)
+	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.processDataFromSocket(ConscryptEngineSocket.java:928)
+	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.readUntilDataAvailable(ConscryptEngineSocket.java:894)
+	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.read(ConscryptEngineSocket.java:867)
+	at java.io.DataInputStream.readFully(DataInputStream.java:203)
+	at rikka.shizuku.U0.b(SourceFile:33)
+	at rikka.shizuku.U0.a(SourceFile:167)
+	at rikka.shizuku.Qs.j(SourceFile:33)
+	at rikka.shizuku.Q4.h(SourceFile:6)
+	at rikka.shizuku.ba.run(SourceFile:102)
+	at rikka.shizuku.A0.run(SourceFile:45)
+	at rikka.shizuku.xp.run(SourceFile:3)
+	at rikka.shizuku.Y7.run(SourceFile:89)
+  # Introduction
 
 Shizuku can help normal apps uses system APIs directly with adb/root privileges with a Java process started with app_process.
 
